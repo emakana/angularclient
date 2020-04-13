@@ -1,0 +1,54 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          [(ngModel)]="user.fullName"
+          class="form-control"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your full name"
+          required
+        />
+        TODO: remove this: {{ user.fullName }}
+      </div>
+
+      <div class="form-group">
+        <label for="idno">Id No</label>
+        <input
+          type="text"
+          [(ngModel)]="user.idNo"
+          class="form-control"
+          id="idNo"
+          name="idNo"
+          placeholder="Enter your ID No"
+          required
+        />
+        TODO: remove this: {{ user.idNo }}
+      </div>
+
+      <div class="form-group">
+        <label for="createdAt">Created At</label>
+        <input
+          type="text"
+          [(ngModel)]="user.createdAt"
+          class="form-control"
+          id="createdAt"
+          name="createdAt"
+          placeholder="Enter your Create Date"
+          required
+        />
+        TODO: remove this: {{ user.createdAt }}
+      </div>
+      <button
+        type="submit"
+        [disabled]="!userForm.form.valid"
+        class="btn btn-info"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
